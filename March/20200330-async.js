@@ -150,3 +150,16 @@ var deps = {
 // async.auto()能根据依赖关系自动分析，以最佳的方式完成上述业务
 async.auto(deps)
 // 也可以用eventproxy来完成
+proxy.asap('readtheConfig', () => {
+    proxy.emit('readConfig')
+}).on('readConfig', function() {
+    proxy.emit('connectMongoDB')
+}).on('readConfig', () => {
+    proxy.emit('connectRedis')
+}).assp('compiletheassets', function () {
+    proxy.emit('compileAssets')
+}).on('compileAssets', function () {
+    proxy.emit('uploadAssets')
+}).all('connectMongoDB', 'connectRedis', 'uploadAssets', function () {
+    // startup
+})
