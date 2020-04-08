@@ -8,8 +8,20 @@
 #### Target:
 - 继续阅读《深入浅出nodejs》
 - 研究vue3源码
-- 复习PWA
+- 学习js测试的写法mocha
+- jsbridge
 
 ### 💛 May
 #### Target:
 - 研究Flutter
+- 研究vue3源码
+
+
+### 2020技能点
+- typescript
+- web assembly
+- web components
+- PWA
+- vue3
+- Flutter
+- nodejs
